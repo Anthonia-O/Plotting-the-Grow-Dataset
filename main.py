@@ -3,8 +3,9 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import matplotlib.patches as mpatches
 
+try:
     # Reading the Data into a DataFrame
-    file_path = r'C:\Users\Tonio\OneDrive\Desktop\Programming Assignment\Python 2 assignment\GrowLocations.csv'
+    file_path = r'.\GrowLocations.csv'
     data = pd.read_csv(file_path)
     print("Data loaded successfully:")
     print(data.head())  # Display the first few rows of the DataFrame to check data loading.
@@ -18,7 +19,7 @@ import matplotlib.patches as mpatches
     print(filtered_data.head())  # Check what data remains after filtering.
 
     # Plotting the Data Correctly
-    map_image_path = r"C:\Users\Tonio\OneDrive\Desktop\Programming Assignment\Python 2 assignment\map7.png"
+    map_image_path = r".\map7.png"
     map_image = Image.open(map_image_path)
     plt.figure(figsize=(10, 15))
     plt.imshow(map_image, extent=[-10.592, 1.6848, 50.681, 57.985])
